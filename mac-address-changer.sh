@@ -64,7 +64,7 @@ else
 			
 			echo "Wireless MAC address of interface $wifiInterface changed to: $randomMAC (random)"	
 		else
-			echo "Wrong syntax. Type 'sh mac-address-changer.sh' for more information."
+			echo "Wrong syntax. Type './mac-address-changer.sh' for more information."
 		fi
 	else
 		echo "Your WiFi is turned off ($wifiInterface has no power)."
