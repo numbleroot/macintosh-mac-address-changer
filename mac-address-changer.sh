@@ -12,13 +12,13 @@
 wifiInterface="en0"
 
 # Change wifiDefaultMAC to your wifiInterface device MAC
-wifiDefaultMAC="b8:e8:56:41:30:62"
+wifiDefaultMAC="XX:XX:XX:XX:XX:XX"
 
 # Change ethInterface to the name of your ethernet interface
-ethInterface="en4"
+ethInterface="en1"
 
 # Change ethDefaultMAC to your ethInterface device MAC
-ethDefaultMAC="68:5b:35:91:7e:6b"
+ethDefaultMAC="XX:XX:XX:XX:XX:XX"
 
 #################################  END CONFIG AREA  #################################
 
