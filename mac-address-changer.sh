@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Usage:
-# $ sh mac-address-changer.sh home	=> Changes your wifi and ethernet MAC address to their original ones
-# $ sh mac-address-changer.sh random	=> Changes your wifi and ethernet MAC address to hopefully random addresses
+# $ ./mac-address-changer.sh home	=> Changes your wifi and ethernet MAC address to their original ones
+# $ ./mac-address-changer.sh random	=> Changes your wifi and ethernet MAC address to hopefully random addresses
 
 
 
@@ -26,7 +26,7 @@ ethDefaultMAC="68:5b:35:91:7e:6b"
 
 if [ $# != 1 ]
 then
-	echo "Usage: sh mac-address-changer.sh [home|random]"
+	echo "usage: ./mac-address-changer.sh [home|random]"
 else
 	if `networksetup -getairportpower "$wifiInterface" | grep -q On`
 	then
@@ -34,6 +34,7 @@ else
 		then
 			sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -z
 			sudo ifconfig "$wifiInterface" ether "$wifiDefaultMAC"
+
 			echo "Wireless MAC address of interface $wifiInterface changed to: $wifiDefaultMAC (home)"
 		elif [ "$1" == "random" ]
 		then
